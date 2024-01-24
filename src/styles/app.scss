@@ -1,0 +1,51 @@
+.saving-segment-drawer {
+    .ant-drawer-header {
+        background-color: #39aebc;
+        min-height: 60px;
+        .ant-drawer-header-title {
+            display: flex;
+            align-items: center;
+            .ant-drawer-title{
+                color: #fff;
+            }
+        }
+    }
+    .ant-drawer-body {
+        .ant-select-selector{
+            border: none !important;
+        }
+        .ant-select-focused .ant-select-selector,
+        .ant-select-selector:focus,
+        .ant-select-selector:active,
+        .ant-select-open .ant-select-selector {
+          border-color: none!important;
+          box-shadow: none !important;
+        }
+        .ant-input-outlined:hover,
+        .ant-input-outlined:focus,
+        .ant-input-outlined:active {
+            border-color: #d9d9d9 !important;
+            box-shadow: none !important;
+        }
+    }
+    .ant-drawer-footer{
+        background-color: #f6f6f6;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
