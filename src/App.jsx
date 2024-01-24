@@ -156,7 +156,7 @@ function App() {
                         <Input
                             name={"segment_name"}
                             id={"segmentName"}
-                            className={"block w-full rounded-md border px-2 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 h-11 outline-none"}
+                            className={"block w-full rounded-md border px-2 py-1.5 text-gray-900 shadow-sm placeholder:text-[#000] sm:text-sm sm:leading-6 h-11 outline-none"}
                             placeholder="Name of the segment"
                             onChange={(e) => {
                                 setFormValue({ ...formValue, segment_name: e.target.value })
@@ -222,15 +222,14 @@ function App() {
                                     <div className="flex justify-between">
                                         <Select
                                             name={"add_schema"}
-                                            placeholder={"Add schema to segment"}
-                                            className={"w-full block rounded-md border py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 sm:text-sm sm:leading-6 min-h-11 h-fit mr-2"}
+                                            className={"w-full block rounded-md border py-1.5 text-gray-900 shadow-sm sm:text-sm sm:leading-6 min-h-11 h-fit mr-2"}
                                             onChange={(value) => {
                                                 setFormValue({ ...formValue, ['add_schema']: value })
                                                 setErrMsg("")
                                             }}
                                             value={formValue["add_schema"]}
                                         >
-                                            <Select.Option value="">Select an option</Select.Option>
+                                            <Select.Option className="text-gray-400" value="">Add schema to segment</Select.Option>
                                             {
                                                 schema.map((option, index) => {
                                                     const isSelected = formValue?.schema?.some(data => data.fieldName === option.value);
@@ -262,7 +261,7 @@ function App() {
             </Drawer>
         </>
     )
-    
+
 }
 
 export default App
